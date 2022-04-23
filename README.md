@@ -118,11 +118,11 @@ Terminate ROAST process:
 
    
 Output:
-Improved fasta files from all iterations named as Name_SuperIterationNumber-MiniIterationNumber.fasta e.g. Name_1-1.fasta for first improvement in intermediate_improved_assemblies folder
+Improved fasta files from all iterations named as Name_SuperIterationNumber-MiniIterationNumber.fasta e.g. Name_1-1.fasta for first improvement in intermediate_improved_assemblies folder.
 
-Final improved file named final_improved.fasta, summary file and removed sequences can be found in final_improved assembly folder
+Final improved file named final_improved.fasta, summary file and removed sequences can be found in final_improved assembly folder.
 
 Along with that, the log data for each improvement at each step is present in log folder with file name after each super and mini iterations.
-Time log shows time taken by each step
+Time log shows time taken by each step.
 
-Run statistics display on screen
+Run statistics display on screen.
