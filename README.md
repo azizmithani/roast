@@ -73,6 +73,7 @@ Reference type:
    --trinity_assembly 			 Provide transcript fasta for Raw Trinity assembly improvement
    --generate_assembly 			 Set and export the environmental variable TRINITY_HOME to point Trinity installation folder to generate De novo Transcriptome assembly and improve output
 
+        
 Parameters:
    --output_dir 			 Path for output directories, default folder of input reference sequence
    --inner_itr <INT> 			 Number of Inner iterations threshold, def 30
