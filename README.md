@@ -69,11 +69,8 @@ Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 Usage: ROAST --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
 
 Reference type:
-	
    --supertranscript_assembly 		 Provide SuperTranscript fasta for SuperTranscript assembly improvement
-	
    --trinity_assembly 			 Provide transcript fasta for Raw Trinity assembly improvement
-	
    --generate_assembly 			 Set and export the environmental variable TRINITY_HOME to point Trinity installation folder to generate De novo Transcriptome assembly and improve output
 
 Parameters:
