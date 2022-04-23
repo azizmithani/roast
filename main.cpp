@@ -713,30 +713,7 @@ int main(int argc, char** argv) {
                utils.remove_file(trinity_version);
         }
 
-     
-        /* ifstream assem;
-         assem.open(init_ST_fasta.c_str());
-         if (assem.peek() == std::ifstream::traits_type::eof()) {
-             cerr << endl << "Couldn't generate assembly. Please set and export environmental variable TRINITY_HOME to point Trinity installation folder to generate assembly or provide generated assembly for improvement...." << endl;
-             exit(0);
-         }
-         assem.close();*/
         ST_fasta = init_ST_fasta;
-
-        // because STs are included in Trinity command 
-        /*//TRINITY_HOME/Analysis/OuterTranscripts/Trinity_gene_splice_modeler.py --trinity_fasta AL.fasta --out_prefix AL.ST.fasta
-        find = init_fasta.find_last_of(".");
-        ST_fasta = init_fasta.substr(0, find) + ".ST"; // Outertranscript script add .fasta by itself
-        string trinityOuterTranscript_command = "python " + exe_path + "external_tools/OuterTranscripts/Trinity_gene_splice_modeler.py --trinity " + init_fasta + " --out_prefix " + ST_fasta + " > /dev/null 2>&1";
-        std::system(trinityOuterTranscript_command.c_str());
-
-        //ifstream assem;
-        assem.open(ST_fasta.c_str());
-        if (assem.peek() == std::ifstream::traits_type::eof()) {
-            cerr << endl << "Couldn't generate OuterTranscript. Please provide valid path for Trinity Home to generate ST or provide generated ST for improvement...." << endl;
-            exit(0);
-        }
-        assem.close(); */
 
         fasta = ST_fasta;
     }
