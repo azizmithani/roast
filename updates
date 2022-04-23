@@ -1,0 +1,104 @@
+it contains changes directly in 14 july version, which is different from 25th july version
+it incudes
+	changes in CAP3 and RI module
+	if after merging with cap3 contig total increase in length is < 50% of the read length drop that extension and marked this tag as LX and RX bases on side
+	Don't create CAP3 of contigs with such tags in anyother iterations
+	if contig and its CAP3 derivative are merging at RI step and again length doesn't meet above criteria
+	in case of merging of this contig with any other contig remove this tag, it will be added next time automatically if again CAP3 generated contig for it.
+
+######################
+This version has cd-hit after every inner and outer iteration
+
+#####################
+-> This version has Number of Ns 5 for merging of CAP3 assemblies
+-> filtering low quality mapping reads that may lead to uneven read numbers in bam file (which we have to fixed by picard may be) // stopped filtering option for the moment
+
+
+#####################
+
+-> replacing BLAT with local BLAST every where
+
+#####################
+
+-> filter distantly mapped reads code
+-> change byRI.cpp for collecting RI and MI data 
+-> main.cpp
+
+#####################
+
+For consensus sequence use botH CAP3 + my own script
+
+#####################
+
+mis-assembly chimera: change criteria to avoid exox-exon boundaries for start and end posotion at exteme corners
+
+######################
+
+added filter of mapping reads for missing sequence position
+
+#####################
+
+changed category of translocation to unsupported insertion for some cases
+
+#####################
+
+added check on size of header to avoid error at cufflink step due to long header ID 
+
+#####################
+
+added query size check in merging by SC to avoid merging of shorter seq than overlapTH
+
+#####################
+
+fixed bug in mis_assembly_chimera.cpp -> filterPOs_processFasta.
+
+####################
+
+fixed bug in R2 due to different strands for same contig for both BLASTs
+
+####################
+
+fixed bugs in misassemblies_chimera
+-> float
+-> 10 bases margin between two SCs pattern
+-> coverage index adjustment
+
+#####################
+
+cdhitest input for all 
+
+#####################
+
+window size for gradual 200 , contig length > 600, loop end < read_length *3
+
+#####################
+
+Added BAM filter for hisat too
+
+#####################
+
+Filter secondary and supplementary alignments too in bam filter function
+
+#####################
+
+cdhitest options 0 1 2 for no, only in the start and for every iteration
+
+#####################
+
+bug fixed in mis-assembled_chiemera
+
+#####################
+
+BUg fixed for inversion
+
+#####################
+
+for criscross pattern of multigene chimera
+SC_support_TH2 = SC_support_TH/2
+
+for one-sided softclips for multigene chimera
+SC_support_TH2 = SC_support_TH
+
+##################### 14feb22
+
+Base quality check using phred score for softclips
