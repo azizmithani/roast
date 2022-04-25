@@ -1,6 +1,10 @@
 # roast
 ROAST: A tool for Reference-free Optimisation of Assembled SuperTranscriptomes
 
+
+Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
+Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
+
 **Dependencies:**
 
 ROAST is written in C++ and needs the following programs (provided as external tools with ROAST):
@@ -19,7 +23,7 @@ CAP3
 
 Picard
 
-Following programming languages and tools must have installed on the user system and add in PATH (required)
+Following programming languages and tools must be installed on the system and added in PATH (required)
 
 JAVA
 
@@ -35,12 +39,9 @@ BOOST API library
 
 Bamtools API library (github.com/pezmaster31/bamtools)
 
+Trinity ()
 
-Follwoing tools Install and add in PATH (if required) 
-
-Trinity
-
-**Installation:**
+**Bamtools Installation:**
 
 Set library path
 
@@ -65,10 +66,6 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 
 
 **Usage:**
-
-Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
-Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
-
 
 	roast --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
 
