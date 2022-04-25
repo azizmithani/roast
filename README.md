@@ -58,9 +58,9 @@ Command To Compile:
 
 You can Run ROAST from installation/directory/ROAST or set the environmental variable ROAST to point to this, which will make it easy to access both ROAST as well as external tools that come bundled with ROAST.
 
- 	% export ROAST=/path/to/ROAST/installation/directory
+ 	export ROAST=/path/to/ROAST/installation/directory
 
- 	% $ROAST/roast --help (for help)
+ 	$ROAST/roast --help (for help)
 
 
 USAGE:
@@ -157,7 +157,6 @@ Improved fasta files from all iterations named as Name_SuperIterationNumber-Mini
 
 Final improved file named final_improved.fasta, summary file and removed sequences can be found in final_improved assembly folder.
 
-Along with that, the log data for each improvement at each step is present in log folder with file name after each super and mini iterations.
-Time log shows time taken by each step.
+The log data for each improvement at each step is present in log folder with file name after each super and mini iterations. Time log shows time taken by each step.
 
 Run statistics display on screen.
