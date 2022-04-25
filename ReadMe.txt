@@ -1,6 +1,6 @@
 # ROAST: a tool for reference-free optimization of supertranscriptome assemblies
 
-Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
+Program: ROAST (Reference-free Optimization of Assembled SuperTranscriptomes)
 
 Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 
@@ -22,13 +22,13 @@ ROAST is written in C++ and needs the following programs (provided as external t
 
 * Picard
 
-* SuperTranscript script 
+* supertranscript script 
 
 Following programming languages and tools must be installed on the system and added in PATH (required)
 
-* JAVA
+* Java
 
-* python
+* Python
 
 * C++
 
@@ -72,19 +72,19 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 
 **Reference type:**
 
-	--supertranscript_assembly 		Provide SuperTranscript fasta for SuperTranscript assembly improvement
+	--supertranscript_assembly <STR> 	Provide SuperTranscript fasta for supertranscriptome assembly improvement
 
-	--trinity_assembly 			Provide transcript fasta for Raw Trinity assembly improvement
+	--trinity_assembly <STR>		Provide transcript fasta for raw Trinity assembly improvement
 
-	--generate_assembly 			Set and export the environmental variable TRINITY_HOME to point Trinity installation folder to generate De novo Transcriptome assembly and improve output
+	--generate_assembly 			Generate de novo supertranscriptome assembly for improvement. Set and export the environmental variable TRINITY_HOME to point to the Trinity installation folder 
 
 **Parameters:**
    
-	--output_dir 			 	Path for output directories, default folder of input reference sequence
+	--output_dir <STR>		 	Path for output directories, default folder of input reference sequence
    
-	--inner_itr <INT> 			Number of Inner iterations threshold, default 30
+	--inner_itr <INT> 			Number of inner iterations threshold, default 30
    
-	--outer_itr <INT> 			Number of Outer Iterations threshold, default 100
+	--outer_itr <INT> 			Number of outer Iterations threshold, default 100
 
 	--improvment_TH <INT> 		 	Keep improving until number of improved contigs meet threshold, default 1
 
@@ -104,9 +104,9 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--cdHitEST <INT> 			0 for no CD-HIT-EST, 1 for CD-HIT-EST only in the start, 2 for CD-HIT-EST after every iteration, default 1
 	
-	--mapping_quality 			Minimum mapping quality to filter Bam file, default 20
+	--mapping_quality <INT>			Minimum mapping quality to filter Bam file, default 20
 	
-	--sc_support_TH 			Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75
+	--sc_support_TH <INT>			Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75
 	
 	--min_SCs_reads <INT> 		  	Minimum number of softclips reads for extension of Incomplete contigs, default 3
 	
@@ -122,7 +122,7 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--min_distMapped_reads <INT> 	 	Minimum number of distantly mapped reads to consider as read island for merging of fragmented contigs, default 3
 	
-	--contig_boundary <true> 		Check overlap between two fragmented contigs within 5% read length of the contig boundary, default read island boundary
+	--contig_boundary	 		Check overlap between two fragmented contigs within 5% read length of the contig boundary, default read island boundary
 	
 	--min_allowed_unmapped_ext <INT> 	Minimum number of bases to be considered for valid extension using unmapped reads, default 50% of read length
 	
@@ -148,9 +148,9 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--Insert_Ns <INT> 			Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5
 	
-Terminate ROAST process:
+**Terminate ROAST process:**
 
-To stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
+To stop ROAST properly at the end of current iteration, place an empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
 
    
 ## Output:
@@ -161,4 +161,4 @@ Final improved file named final_improved.fasta, summary file and removed sequenc
 
 The log data for each improvement at each step is present in log folder with file name after each super and mini iterations. Time log shows time taken by each step.
 
-Run statistics display on screen.
+Run statistics are displayed on screen.
