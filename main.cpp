@@ -112,7 +112,7 @@ void help() {
 
     cerr << "   --ignore_short_seq <INT> \t\t Minimum length of the contig to remove from the assembly, default200" << endl;
 
-    cerr << "   --Insert_Ns <INT> \t\t\t Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5" << endl << endl;
+    cerr << "   --insert_Ns <INT> \t\t\t Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5" << endl << endl;
 
     cerr << "Terminate ROAST process:" << endl;
     
@@ -601,7 +601,7 @@ int main(int argc, char** argv) {
                 return 1;
             }
 
-        } else if (args[i] == "--Insert_Ns") {
+        } else if (args[i] == "--insert_Ns") {
 
             Ns = atoi(args[i + 1].c_str());
 
