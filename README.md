@@ -76,7 +76,7 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 
 	--trinity_assembly 			Provide transcript fasta for Raw Trinity assembly improvement
 
-	--generate_assembly 			Set and export the environmental variable TRINITY_HOME to point Trinity installation folder to generate De novo Transcriptome assembly and improve output
+	--generate_assembly 			Generate de novo SuperTranscriptome assembly for improvement. Set and export the environmental variable TRINITY_HOME to point to the Trinity installation folder 
 
 **Parameters:**
    
