@@ -4,7 +4,7 @@ Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
 
 Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 
-**Dependencies:**
+## Dependencies:
 
 ROAST is written in C++ and needs the following programs (provided as external tools with ROAST):
 
@@ -14,31 +14,31 @@ ROAST is written in C++ and needs the following programs (provided as external t
 
 * HISAT2
 
-Cufflinks
+* Cufflinks
 
-BLAT
+* BLAT
 
-CAP3
+* CAP3
 
-Picard
+* Picard
 
 Following programming languages and tools must be installed on the system and added in PATH (required)
 
-JAVA
+* JAVA
 
-python
+* python
 
-c++
+* c++
 
-BLAST
+* BLAST
 
-Samtools (version >= 1.9)
+* Samtools (version >= 1.9)
 
-BOOST API library
+* BOOST API library
 
-Bamtools API library (github.com/pezmaster31/bamtools)
+* Bamtools API library (github.com/pezmaster31/bamtools)
 
-Trinity (required if assembly is not provided)
+* Trinity (required if assembly is not provided)
 
 **Bamtools and BOOST library Installation:**
 
