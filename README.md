@@ -46,22 +46,22 @@ Following programming languages and tools must be installed on the system and ad
 
 Set library path
 
-	export LD_LIBRARY_PATH="pathTo/installed/bamtools-2.4.0/lib:pathTo/installed/boost/stage/lib"
+	export LD_LIBRARY_PATH="/path/to/bamtools-2.4.0/installation/dir/lib:/path/to/boost/installation/dir/stage/lib"
 
 ## Commands to Compile:
 
-	g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
-	g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/  ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
-	g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/  ROAST_extendContigs_SCs.cpp -o ROAST_mergeContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/  ROAST_extendContigs_SCs.cpp -o ROAST_mergeContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
-	g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/ main.cpp mis_assembly_chimera.cpp global.cpp filterSamToFastq.cpp bySoftclip.cpp byRI.cpp alignment.cpp utils.h -o roast -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ main.cpp mis_assembly_chimera.cpp global.cpp filterSamToFastq.cpp bySoftclip.cpp byRI.cpp alignment.cpp utils.h -o roast -lbamtools -lboost_filesystem  -lboost_regex -lz
 
 
 ROAST can be run from installation/directory/ROAST or by setting the environmental variable ROAST to point to this, which will make it easy to access both ROAST as well as external tools that come bundled with ROAST.
 
- 	export ROAST=/path/to/ROAST/installation/directory
+ 	export ROAST=/path/to/ROAST/installation/dir
 
  	$ROAST/roast --help (for help)
 
