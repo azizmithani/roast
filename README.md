@@ -146,7 +146,7 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--ignore_short_seq <INT> 		Minimum length of the contig to remove from the assembly, default 200
 	
-	--Insert_Ns <INT> 			Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5
+	--insert_Ns <INT> 			Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5
 	
 **Terminate ROAST process:**
 
