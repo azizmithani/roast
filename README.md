@@ -8,11 +8,11 @@ Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 
 ROAST is written in C++ and needs the following programs (provided as external tools with ROAST):
 
-*CD-HIT-EST
+* CD-HIT-EST
 
-*MINIMAP2
+* MINIMAP2
 
-*HISAT2
+* HISAT2
 
 Cufflinks
 
