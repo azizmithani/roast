@@ -37,20 +37,20 @@ void help() {
 
     cerr << "Reference type:" << endl;
 
-    cerr << "   --supertranscript_assembly \t\t Provide SuperTranscript fasta for SuperTranscript assembly improvement" << endl;
+    cerr << "   --supertranscript_assembly <STR> \t Provide SuperTranscript fasta for supertranscript assembly improvement" << endl;
 
-    cerr << "   --trinity_assembly \t\t\t Provide transcript fasta for Raw Trinity assembly improvement" << endl;
+    cerr << "   --trinity_assembly <STR>  \t\t Provide transcript fasta for raw Trinity assembly improvement" << endl;
 
     cerr << "   --generate_assembly \t\t\t Set and export the environmental variable TRINITY_HOME to point Trinity installation folder to generate De novo Transcriptome assembly and improve output" << endl << endl;
 
 
     cerr << "Parameters:" << endl;
 
-    cerr << "   --output_dir \t\t\t Path for output directories, default folder of input reference sequence" << endl;
+    cerr << "   --output_dir <STR>  \t\t\t Path for output directories, default folder of input reference sequence" << endl;
 
-    cerr << "   --inner_itr <INT> \t\t\t Number of Inner iterations threshold, default 30" << endl;
+    cerr << "   --inner_itr <INT> \t\t\t Number of inner iterations threshold, default 30" << endl;
 
-    cerr << "   --outer_itr <INT> \t\t\t Number of Outer Iterations threshold, default 100" << endl;
+    cerr << "   --outer_itr <INT> \t\t\t Number of outer Iterations threshold, default 100" << endl;
 
     cerr << "   --improvment_TH <INT> \t\t Keep improving until number of improved contigs meet threshold, default 1" << endl;
 
@@ -70,9 +70,9 @@ void help() {
 
     cerr << "   --cdHitEST <INT> \t\t\t 0 for no CD-HIT-EST, 1 for CD-HIT-EST only in the start, 2 for CD-HIT-EST after every iteration, default 1" << endl;
 
-    cerr << "   --mapping_quality \t\t\t Minimum mapping quality to filter Bam file, default 20" << endl << endl;
+    cerr << "   --mapping_quality <INT> \t\t Minimum mapping quality to filter Bam file, default 20" << endl << endl;
 
-    cerr << "   --sc_support_TH \t\t\t Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75" << endl;
+    cerr << "   --sc_support_TH <INT> \t\t Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75" << endl;
 
     cerr << "   --min_SCs_reads <INT> \t\t Minimum number of softclips reads for extension of Incomplete contigs, default 3" << endl;
 
@@ -88,13 +88,13 @@ void help() {
 
     cerr << "   --min_distMapped_reads <INT> \t Minimum number of distantly mapped reads to consider as read island for merging of fragmented contigs, default 3" << endl;
 
-    cerr << "   --contig_boundary <true> \t\t Check overlap between two fragmented contigs within 5% read length of the contig boundary, default read island boundary" << endl;
+    cerr << "   --contig_boundary   \t\t\t Check overlap between two fragmented contigs within 5% read length of the contig boundary, default read island boundary" << endl;
 
     cerr << "   --min_allowed_unmapped_ext <INT> \t Minimum number of bases to be considered for valid extension using unmapped reads, default 50% of read length" << endl;
 
-    cerr << "   --one_side_allowed_SCs_RI <INT> \t Maximum % of softclips of the total read length allowed at one side of read to consider it for Read Island, defaultf 25" << endl;
+    cerr << "   --one_side_allowed_SCs_RI <INT> \t Maximum % of softclips of the total read length allowed at one side of read to consider it for Read island, defaultf 25" << endl;
 
-    cerr << "   --each_side_allowed_SCs_RI <INT> \t Maximum % of softclips of the total read length allowed at both sides of read to consider it for Read Island, default 12" << endl;
+    cerr << "   --each_side_allowed_SCs_RI <INT> \t Maximum % of softclips of the total read length allowed at both sides of read to consider it for Read island, default 12" << endl;
 
     cerr << "   --sc_start_pos_from_terminus <INT> \t For terminal softclips extraction, define starting position to consider, default 25" << endl;
 
@@ -1150,5 +1150,6 @@ int main(int argc, char** argv) {
     }
     return 0;
 }
+
 
 
