@@ -1,74 +1,72 @@
-# roast
-ROAST: A tool for Reference-free Optimisation of Assembled SuperTranscriptomes
+# ROAST: a tool for reference-free optimization of supertranscriptome assemblies
 
-**Dependencies:**
+Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
+
+Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
+
+## Dependencies:
 
 ROAST is written in C++ and needs the following programs (provided as external tools with ROAST):
 
-CD-HIT-EST
+* CD-HIT-EST
 
-MINIMAP2
+* MINIMAP2
 
-HISAT2
+* HISAT2
 
-Cufflinks
+* Cufflinks
 
-BLAT
+* BLAT
 
-CAP3
+* CAP3
 
-Picard
+* Picard
 
-Following programming languages and tools must have installed on the user system and add in PATH (required)
+* SuperTranscript script 
 
-JAVA
+Following programming languages and tools must be installed on the system and added in PATH (required)
 
-python
+* JAVA
 
-c++
+* python
 
-BLAST
+* C++
 
-Samtools (version >= 1.9)
+* BLAST
 
-BOOST API library
+* Samtools (version >= 1.9)
 
-Bamtools API library (github.com/pezmaster31/bamtools)
+* BOOST API library
 
+* Bamtools API library (github.com/pezmaster31/bamtools)
 
-Follwoing tools Install and add in PATH (if required) 
+* Trinity (required if assembly is not provided)
 
-Trinity
-
-**Installation:**
+**Bamtools and BOOST library Installation:**
 
 Set library path
 
-	export LD_LIBRARY_PATH="pathTo/installed/bamtools-2.4.0/lib:pathTo/installed/boost/stage/lib"
+	export LD_LIBRARY_PATH="/path/to/bamtools-2.4.0/installation/dir/lib:/path/to/boost/installation/dir/stage/lib"
 
-**Commands to Compile:**
+## Commands to Compile:
 
-1. g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
-2. g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/  ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
-3. g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/  ROAST_extendContigs_SCs.cpp -o ROAST_mergeContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/  ROAST_extendContigs_SCs.cpp -o ROAST_mergeContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
-4. g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/ main.cpp mis_assembly_chimera.cpp global.cpp filterSamToFastq.cpp bySoftclip.cpp byRI.cpp alignment.cpp utils.h -o roast -lbamtools -lboost_filesystem  -lboost_regex -lz
+	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ main.cpp mis_assembly_chimera.cpp global.cpp filterSamToFastq.cpp bySoftclip.cpp byRI.cpp alignment.cpp utils.h -o roast -lbamtools -lboost_filesystem  -lboost_regex -lz
 
 
-You can Run ROAST from installation/directory/ROAST or set the environmental variable ROAST to point to this, which will make it easy to access both ROAST as well as external tools that come bundled with ROAST.
+ROAST can be run from installation/directory/ROAST or by setting the environmental variable ROAST to point to this, which will make it easy to access both ROAST as well as external tools that come bundled with ROAST.
 
- 	export ROAST=/path/to/ROAST/installation/directory
+ 	export ROAST=/path/to/ROAST/installation/dir
 
  	$ROAST/roast --help (for help)
 
 
-**Usage:**
-
-Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
-Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
-
+## Usage:
 
 	roast --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
 
@@ -150,10 +148,12 @@ Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 	
 	--Insert_Ns <INT> 			Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5
 	
-	Terminate ROAST process:		To stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
+Terminate ROAST process:
+
+To stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
 
    
-**Output:**
+## Output:
 
 Improved fasta files from all iterations named as Name_SuperIterationNumber-MiniIterationNumber.fasta e.g. Name_1-1.fasta for first improvement in intermediate_improved_assemblies folder.
 
