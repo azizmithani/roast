@@ -1,7 +1,7 @@
 # roast
 ROAST: A tool for Reference-free Optimisation of Assembled SuperTranscriptomes
 
-DEPENDENCIES:
+**DEPENDENCIES:**
 
 ROAST is written in C++ and needs the following programs (provided as external tools with ROAST):
 
@@ -40,13 +40,13 @@ Follwoing tools Install and add in PATH (if required)
 
 Trinity
 
-INSTALLATION:
+**INSTALLATION:**
 
 Set library path
 
 	export LD_LIBRARY_PATH="pathTo/installed/bamtools-2.4.0/lib:pathTo/installed/boost/stage/lib"
 
-Command To Compile:
+**Command To Compile:**
 
 1. g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
@@ -64,7 +64,7 @@ You can Run ROAST from installation/directory/ROAST or set the environmental var
  	$ROAST/roast --help (for help)
 
 
-USAGE:
+**USAGE:**
 
 Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
 Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
@@ -72,7 +72,7 @@ Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 
 	roast --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
 
-Reference type:
+**Reference type:**
 
 	--supertranscript_assembly 		Provide SuperTranscript fasta for SuperTranscript assembly improvement
 
@@ -80,7 +80,7 @@ Reference type:
 
 	--generate_assembly 			Set and export the environmental variable TRINITY_HOME to point Trinity installation folder to generate De novo Transcriptome assembly and improve output
 
-Parameters:
+**Parameters:**
    
 	--output_dir 			 	Path for output directories, default folder of input reference sequence
    
@@ -153,7 +153,8 @@ Parameters:
 	Terminate ROAST process:		To stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
 
    
-Output:
+**Output:**
+
 Improved fasta files from all iterations named as Name_SuperIterationNumber-MiniIterationNumber.fasta e.g. Name_1-1.fasta for first improvement in intermediate_improved_assemblies folder.
 
 Final improved file named final_improved.fasta, summary file and removed sequences can be found in final_improved assembly folder.
