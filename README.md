@@ -1,4 +1,5 @@
-# roast
+# ROAST: A tool for Reference-free Optimisation of Assembled SuperTranscriptome
+
 Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
 Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 
