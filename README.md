@@ -22,13 +22,15 @@ ROAST is written in C++ and needs the following programs (provided as external t
 
 * Picard
 
+* SuperTranscript script 
+
 Following programming languages and tools must be installed on the system and added in PATH (required)
 
 * JAVA
 
 * python
 
-* c++
+* C++
 
 * BLAST
 
