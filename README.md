@@ -122,7 +122,7 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--min_distMapped_reads <INT> 	 	Minimum number of distantly mapped reads to consider as read island for merging of fragmented contigs, default 3
 	
-	--contig_boundary <true> 		Check overlap between two fragmented contigs within 5% read length of the contig boundary, default read island boundary
+	--contig_boundary	 		Check overlap between two fragmented contigs within 5% read length of the contig boundary, default read island boundary
 	
 	--min_allowed_unmapped_ext <INT> 	Minimum number of bases to be considered for valid extension using unmapped reads, default 50% of read length
 	
