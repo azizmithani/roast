@@ -136,12 +136,9 @@ Parameters:
 	--ignore_short_seq <INT> 		Minimum length of the contig to remove from the assembly, default 200
 	
 	--Insert_Ns <INT> 			Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5
+	
+	Terminate ROAST process:		to stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
 
-Terminate ROAST process:
-   to stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
-
-
-###############################################################################################################################
    
 Output:
 Improved fasta files from all iterations named as Name_SuperIterationNumber-MiniIterationNumber.fasta e.g. Name_1-1.fasta for first improvement in intermediate_improved_assemblies folder.
