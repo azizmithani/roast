@@ -106,7 +106,7 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--mapping_quality <INT>			Minimum mapping quality to filter Bam file, default 20
 	
-	--sc_support_TH <INT>			Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75
+	--sc_support_TH <FLOAT>			Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75
 	
 	--min_SCs_reads <INT> 		  	Minimum number of softclips reads for extension of Incomplete contigs, default 3
 	
@@ -138,7 +138,7 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--win_diff_TH <INT> 			Maximum average coverage change threshold between two consecutive windows, default off
 	
-	--coverage_drop_TH <INT> 		Maximum coverage ratio between two consecutive positions to process for false chimera identification process, default 0.2
+	--coverage_drop_TH <FLOAT> 		Maximum coverage ratio between two consecutive positions to process for false chimera identification process, default 0.2
 	
 	--st_end_boundary <INT> 		Consider coverage change within start and end boundary of the contig, default one and half of read length 
 	
