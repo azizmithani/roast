@@ -46,7 +46,7 @@ Set library path
 
 	export LD_LIBRARY_PATH="pathTo/installed/bamtools-2.4.0/lib:pathTo/installed/boost/stage/lib"
 
-**Commands to Compile:**
+## Commands to Compile:
 
 	g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
@@ -64,7 +64,7 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
  	$ROAST/roast --help (for help)
 
 
-**Usage:**
+## Usage:
 
 	roast --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
 
@@ -151,7 +151,7 @@ Terminate ROAST process:
 To stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
 
    
-**Output:**
+## Output:
 
 Improved fasta files from all iterations named as Name_SuperIterationNumber-MiniIterationNumber.fasta e.g. Name_1-1.fasta for first improvement in intermediate_improved_assemblies folder.
 
