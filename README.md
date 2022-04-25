@@ -161,4 +161,4 @@ Final improved file named final_improved.fasta, summary file and removed sequenc
 
 The log data for each improvement at each step is present in log folder with file name after each super and mini iterations. Time log shows time taken by each step.
 
-Run statistics display on screen.
+Run statistics are displayed on screen.
