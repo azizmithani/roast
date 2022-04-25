@@ -72,7 +72,7 @@ void help() {
 
     cerr << "   --mapping_quality <INT> \t\t Minimum mapping quality to filter Bam file, default 20" << endl << endl;
 
-    cerr << "   --sc_support_TH <INT> \t\t Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75" << endl;
+    cerr << "   --sc_support_TH <FLOAT> \t\t Softclips support for a position for Incomplete and fragmented contigs and false chimera process, default 0.75" << endl;
 
     cerr << "   --min_SCs_reads <INT> \t\t Minimum number of softclips reads for extension of Incomplete contigs, default 3" << endl;
 
@@ -104,7 +104,7 @@ void help() {
     
     cerr << "   --win_diff_TH <INT> \t\t\t Maximum average coverage change threshold between two consecutive windows, default off " << endl;
 
-    cerr << "   --coverage_drop_TH <INT> \t\t Maximum coverage ratio between two consecutive positions to process for false chimera identification process, default 0.2" << endl;
+    cerr << "   --coverage_drop_TH <FLOAT> \t\t Maximum coverage ratio between two consecutive positions to process for false chimera identification process, default 0.2" << endl;
 
     cerr << "   --st_end_boundary <INT> \t\t Consider coverage change within start and end boundary of the contig, default one and half of read length " << endl;
 
