@@ -148,9 +148,9 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--Insert_Ns <INT> 			Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5
 	
-Terminate ROAST process:
+**Terminate ROAST process:**
 
-To stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
+To stop ROAST properly at the end of current iteration, place an empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
 
    
 ## Output:
