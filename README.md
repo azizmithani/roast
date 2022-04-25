@@ -71,14 +71,15 @@ Parameters:
    
 	--output_dir 			 	Path for output directories, default folder of input reference sequence
    
-	--inner_itr <INT> 			 Number of Inner iterations threshold, def 30
+	--inner_itr <INT> 			Number of Inner iterations threshold, def 30
    
-	--outer_itr <INT> 			 Number of Outer Iterations threshold, def 100
+	--outer_itr <INT> 			Number of Outer Iterations threshold, def 100
 
-	--improvment_TH <INT> 		 	keep improving until number of improved contigs meet threshold, def 1
+	--improvment_TH <INT> 		 	Keep improving until number of improved contigs meet threshold, def 1
 
-	--min_extended_contigs <INT> 	 	keep extending until number of extended contigs meet threshold, def 1
-   --max_memory_TRINITY <INT> 		 maximum memory for TRINITY, def 20
+	--min_extended_contigs <INT> 	 	Keep extending until number of extended contigs meet threshold, def 1
+
+	--max_memory_TRINITY <INT> 		Maximum memory for TRINITY, def 20
    --threads <INT> 			 Number of threads, deft 8
    --threadsForSamSort <INT> 		 Number of threads for samtools sort, def 2
    --memForSamSort <INT> 		 Memory for samtools sort, default 768M
