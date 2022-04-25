@@ -5,21 +5,32 @@ DEPENDENCIES:
 ROAST is written in C++ and needs the following programs (provided as external tools with ROAST):
 
 CD-HIT-EST
+
 MINIMAP2
+
 HISAT2
+
 Cufflinks
+
 BLAT
+
 CAP3
+
 Picard
 
 Following programming languages and tools must have installed on the user system and add in PATH (required)
-
 JAVA
+
 python
+
 c++
+
 BLAST
+
 Samtools (version >= 1.9)
+
 BOOST API library
+
 Bamtools API library (github.com/pezmaster31/bamtools)
 
 
@@ -137,7 +148,7 @@ Parameters:
 	
 	--Insert_Ns <INT> 			Number of Ns to insert between contig and its CAP3 assembly in the absence of overlap, default 5
 	
-	Terminate ROAST process:		to stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
+	Terminate ROAST process:		To stop ROAST properly before completion of default iterations place empty file named 'stop.txt' in the folder 'intermediate_Improved_assemblies'.
 
    
 Output:
