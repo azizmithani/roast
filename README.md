@@ -115,7 +115,6 @@ Terminate ROAST process:
 
 
 ###############################################################################################################################
-
    
 Output:
 Improved fasta files from all iterations named as Name_SuperIterationNumber-MiniIterationNumber.fasta e.g. Name_1-1.fasta for first improvement in intermediate_improved_assemblies folder.
