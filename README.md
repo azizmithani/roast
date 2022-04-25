@@ -52,22 +52,12 @@ You can Run ROAST from installation/directory/ROAST or set the environmental var
 
 
 USAGE:
-###############################################################################################################################
-
-Program: ROAST (Transcriptome Assembly Refinement Tool)
-Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
-
-Usage: roast --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
-
-No arguments found
-
-###############################################################################################################################
 
 Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
 Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
 
 
-	Usage: ROAST --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
+	roast --fastq_1 fastq1_filename --fastq_2 fastq2_filename <Reference type> --threads INT [Parameters]
 
 Reference type:
 
