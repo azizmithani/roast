@@ -82,9 +82,9 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
    
 	--output_dir <STR>		 	Path for output directories, default folder of input reference sequence
    
-	--inner_itr <INT> 			Number of Inner iterations threshold, default 30
+	--inner_itr <INT> 			Number of inner iterations threshold, default 30
    
-	--outer_itr <INT> 			Number of Outer Iterations threshold, default 100
+	--outer_itr <INT> 			Number of outer Iterations threshold, default 100
 
 	--improvment_TH <INT> 		 	Keep improving until number of improved contigs meet threshold, default 1
 
