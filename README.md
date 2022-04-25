@@ -1,7 +1,7 @@
 # roast
 ROAST: A tool for Reference-free Optimisation of Assembled SuperTranscriptomes
 
-**DEPENDENCIES:**
+**Dependencies:**
 
 ROAST is written in C++ and needs the following programs (provided as external tools with ROAST):
 
@@ -40,13 +40,13 @@ Follwoing tools Install and add in PATH (if required)
 
 Trinity
 
-**INSTALLATION:**
+**Installation:**
 
 Set library path
 
 	export LD_LIBRARY_PATH="pathTo/installed/bamtools-2.4.0/lib:pathTo/installed/boost/stage/lib"
 
-**Command To Compile:**
+**Commands to Compile:**
 
 1. g++ -I pathTo/installed/bamtools-2.4.0/src/ -I pathTo/installed/boost/INCLUDE/dir/ -L pathTo/boost_1_70_0/lib/ -L pathTo/bamtools-2.4.0/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
 
@@ -64,7 +64,7 @@ You can Run ROAST from installation/directory/ROAST or set the environmental var
  	$ROAST/roast --help (for help)
 
 
-**USAGE:**
+**Usage:**
 
 Program: ROAST (Reference free Optimization of Assembled Supertranscriptomes)
 Version: 1.0.0 (using bamtools 2.4.0 and boost c++ libraries)
