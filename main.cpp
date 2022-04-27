@@ -671,13 +671,13 @@ int main(int argc, char** argv) {
         size_t find_path = fastq_first.find_last_of("/\\");
         string new_path;
         if (find_path != string::npos) {
-                new_path = fastq_first.substr(0, find_path) + "/trinity_assembly";
+                new_path = fastq_first.substr(0, find_path) + "/trinity_assembly/";
         } else { // running ROAST from fastq file's folder
                 new_path = "./trinity_assembly";
         }
         //string init_fasta = fastq_first.substr(0, find) + "_Trinity.fasta";
-        string init_fasta = new_path + "/Trinity.fasta";
-        string init_ST_fasta = new_path + "/Trinity.SuperTrans.fasta";
+        string init_fasta = new_path + "Trinity.fasta";
+        string init_ST_fasta = new_path + "Trinity.SuperTrans.fasta";
 
         //./TRINITY_HOME/Trinity --seqType fq --left SRR12002106_1.fastq --right SRR12002106_2.fastq --CPU 6 --max_memory 20G -output assembly_trinity --no_bowtie
         string trinityAssembly_command = "$TRINITY_HOME/Trinity --seqType fq --left " + fastq_first + " --right " + fastq_sec + " --normalize_reads --min_kmer_cov 5 --CPU " + threads + " --max_memory " + max_memory_TRINITY + "G --output " + new_path + " --no_bowtie  --include_supertranscripts --full_cleanup  > /dev/null 2>&1";
@@ -697,7 +697,7 @@ int main(int argc, char** argv) {
 
             string trinity; // indata is like cin
             trinityversion >> trinity;
-	    cout << "trinity version is " << trinity << endl;
+	    //cout << "trinity version is " << trinity << endl;
 	    size_t search_trinity = trinity.find("Trinity");
 
             if (search_trinity != string::npos) { // Trinity file  exist
