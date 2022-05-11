@@ -689,7 +689,7 @@ int main(int argc, char** argv) {
             //TRINITY_HOME/Analysis/OuterTranscripts/Trinity_gene_splice_modeler.py --trinity_fasta AL.fasta --out_prefix AL.ST.fasta
             find = init_fasta.find_last_of(".");
             init_ST_fasta  = init_fasta.substr(0, find) + ".ST";
-            string trinitySuperTranscript_command = "python " + exe_path + "external_tools/SuperTranscripts/Trinity_gene_splice_modeler.py --trinity_fasta " + init_fasta + " --out_prefix " + init_ST_fasta + "> /dev/null 2>&1";
+            string trinitySuperTranscript_command = "python " + exe_path + "external_tools/SuperTranscripts/Trinity_gene_splice_modeler.py --trinity_fasta " + init_fasta + " --out_prefix " + init_ST_fasta + " > /dev/null 2>&1";
            // cout << trinitySuperTranscript_command << endl;
             std::system(trinitySuperTranscript_command.c_str());
 
