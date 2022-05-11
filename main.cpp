@@ -671,22 +671,41 @@ int main(int argc, char** argv) {
         size_t find_path = fastq_first.find_last_of("/\\");
         string new_path;
         if (find_path != string::npos) {
-                new_path = fastq_first.substr(0, find_path) + "/trinity_assembly/";
+                new_path = fastq_first.substr(0, find_path) + "/trinity_assembly";
         } else { // running ROAST from fastq file's folder
                 new_path = "./trinity_assembly";
         }
-        //string init_fasta = fastq_first.substr(0, find) + "_Trinity.fasta";
-        string init_fasta = new_path + "Trinity.fasta";
-        string init_ST_fasta = new_path + "Trinity.SuperTrans.fasta";
+
+        string init_fasta = fastq_first.substr(0, find_path) + "/trinity_assembly.Trinity.fasta";
+        string init_ST_fasta;// = new_path + "Trinity.SuperTrans.fasta";
 
         //./TRINITY_HOME/Trinity --seqType fq --left SRR12002106_1.fastq --right SRR12002106_2.fastq --CPU 6 --max_memory 20G -output assembly_trinity --no_bowtie
         string trinityAssembly_command = "$TRINITY_HOME/Trinity --seqType fq --left " + fastq_first + " --right " + fastq_sec + " --normalize_reads --min_kmer_cov 5 --CPU " + threads + " --max_memory " + max_memory_TRINITY + "G --output " + new_path + " --no_bowtie  --include_supertranscripts --full_cleanup  > /dev/null 2>&1";
         // cout << trinityAssembly_command << endl;
         std::system(trinityAssembly_command.c_str());
 
-        if (boost::filesystem::exists(init_ST_fasta)) // does supertranscript file exist?
+        if (boost::filesystem::exists(init_fasta)) // does Trinity assembly file exist? generate STs
         {
-            //nothing
+            //TRINITY_HOME/Analysis/OuterTranscripts/Trinity_gene_splice_modeler.py --trinity_fasta AL.fasta --out_prefix AL.ST.fasta
+            find = init_fasta.find_last_of(".");
+            init_ST_fasta  = init_fasta.substr(0, find) + ".ST";
+            string trinitySuperTranscript_command = "python " + exe_path + "external_tools/SuperTranscripts/Trinity_gene_splice_modeler.py --trinity_fasta " + init_fasta + " --out_prefix " + init_ST_fasta + "> /dev/null 2>&1";
+           // cout << trinitySuperTranscript_command << endl;
+            std::system(trinitySuperTranscript_command.c_str());
+
+            init_ST_fasta = init_ST_fasta + ".fasta";
+
+            if (boost::filesystem::exists(init_ST_fasta)) // does supertranscript file exist?
+            {
+                //cout << "continue" << endl; 
+            } else {
+                cerr << endl << "Couldn't generate SuperTranscripts from generated Trinity assembly. Please inspect the error or provide generated SuperTranscripts for improvement...." << endl;
+                exit(0);
+            }
+
+            ST_fasta = init_ST_fasta;
+
+            fasta = ST_fasta;
         } else {
             string trinity_version = "trinity_version";
             string trinity_version_check = "$TRINITY_HOME/Trinity --version > " + trinity_version;
@@ -710,9 +729,6 @@ int main(int argc, char** argv) {
                utils.remove_file(trinity_version);
         }
 
-        ST_fasta = init_ST_fasta;
-
-        fasta = ST_fasta;
     }
     if (cdhitest == 1) { // run only in the start
 
