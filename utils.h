@@ -386,8 +386,10 @@ public:
     }
      
     void filter_sam(string bam_in, string bam_out) {
-        size_t find_path = bam_in.find(".");
+               size_t find_path = bam_in.find(".");
         string temp_bam = bam_in.substr(0, find_path) + "_temp.bam";
+        string temp_bam2 = bam_in.substr(0, find_path) + "_temp2.bam";
+        string header_sam = bam_in.substr(0, find_path) + "_header.sam";
         
         BamReader reader;
         vector<int> clipsize, read_pos, gen_pos;
@@ -414,8 +416,8 @@ public:
         while (reader.GetNextAlignment(al)) {
             if (!(al.IsMateMapped()) || !(al.IsMapped())) { //if read unmapped
                 writer.SaveAlignment(al);
-
-            } else if (al.MapQuality >= mapping_quality_TH &&  discard_reads.find(al.Name) == discard_reads.end() && al.IsPrimaryAlignment())  { // to avoid secondary and supplementary alignments  {
+                            
+            } else if (al.MapQuality >= mapping_quality_TH &&  discard_reads.find(al.Name) == discard_reads.end() && al.IsPrimaryAlignment())  { // to avoid secondary and supplementary alignments
                 
                // cout << al.Name << " " << al.MapQuality << endl;
                 if (al.RefID == al.MateRefID) { //map in same contigs
@@ -450,7 +452,7 @@ public:
             cerr << "Could not open BAM file." << endl;
             exit(0);
         }
-        if (!writer.Open(bam_out, header, ref)) {
+        if (!writer.Open(temp_bam2, header, ref)) {
             cerr << "Could not open output BAM file" << endl;
             exit(0);
             // return;
@@ -468,7 +470,16 @@ public:
         }
         reader.Close();
         writer.Close();
+        
+        string extract_samHeader = "samtools view -H  " + temp_bam2 + " > " + header_sam;
+        std::system(extract_samHeader.c_str());
+        
+        string bam_reheader = "samtools reheader  " +  header_sam + " " + temp_bam2 + " > " + bam_out;
+        std::system(bam_reheader.c_str());
+        
         remove(temp_bam.c_str());
+        remove(temp_bam2.c_str());
+        remove(header_sam.c_str());
     }
 
     void filter_sam_distant(string bam_file, string bam_out) {
