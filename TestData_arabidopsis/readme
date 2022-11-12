@@ -1,0 +1,4 @@
+This folder contains:
+1. Input paired-end RNA-seq data for A.thaliana
+2. Input SuperTranscript file containing supertranscriptome of arabidopsis generated using above mentioned data
+3. commands from different tools to evaluate the output assembley 
