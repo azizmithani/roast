@@ -49,14 +49,18 @@ Set library path
 	export LD_LIBRARY_PATH="/path/to/bamtools-2.4.0/installation/dir/lib:/path/to/boost/installation/dir/stage/lib"
 
 ## Commands to Compile:
+copy paste following commands in a text file and save as a bash script. Please change the paths for boost and bamtools installation directories before runnning this script to compile ROAST in the working directory 
 
-	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs  -lbamtools -lboost_filesystem  -lboost_regex -lz
-
-	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
-
-	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/  ROAST_extendContigs_SCs.cpp -o ROAST_mergeContigs_SCs  -lbamtools -lboost_filesystem  -lboost_regex -lz
-
-	g++ -I /path/to/bamtools-2.4.0/installation/dir/src/ -I /path/to/boost/installation/dir/include/ -L /path/to/boost/installation/dir/stage/lib/ -L /path/to/bamtools-2.4.0/installation/dir/lib/ main.cpp mis_assembly_chimera.cpp global.cpp filterSamToFastq.cpp bySoftclip.cpp byRI.cpp alignment.cpp utils.h -o roast -lbamtools -lboost_filesystem  -lboost_regex -lz
+	====
+	#!/bin/bash
+	bamtools=/path/to/my/bamtools
+	boost=/path/to/my/boost
+	
+	 g++ -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs -lbamtools -		lboost_filesystem -lboost_regex -lz
+	 g++ -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs -			lbamtools -lboost_filesystem -lboost_regex -lz
+	 g++ -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ ROAST_mergeContigs_SCs.cpp -o ROAST_mergeContigs_SCs -			lbamtools -lboost_filesystem -lboost_regex -lz
+	 g++ -o roast -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ main.cpp mis_assembly_chimera.cpp global.cpp 			filterSamToFastq.cpp bySoftclip.cpp byRI.cpp alignment.cpp -lbamtools -lboost_filesystem -lboost_regex -lz
+	 ====
 
 
 ROAST can be run from installation/directory/ROAST or by setting the environmental variable ROAST to point to this, which will make it easy to access both ROAST as well as external tools that come bundled with ROAST.
