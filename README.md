@@ -46,7 +46,7 @@ Following programming languages and tools must be installed on the system and ad
 
 Set library path
 
-	export LD_LIBRARY_PATH="/path/to/bamtools-2.4.0/installation/dir/lib:/path/to/boost/installation/dir/lib"
+	export LD_LIBRARY_PATH="/path/to/my/bamtools/lib:/path/to/my/boost/lib"
 
 ## Commands to Compile:
 To compile ROAST in the working directory, copy and paste following bash commands in a text file and save as a bash script. Please change the paths for boost and bamtools installation directories with yours before running this bash script. 
