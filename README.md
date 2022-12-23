@@ -49,7 +49,7 @@ Set library path
 	export LD_LIBRARY_PATH="/path/to/bamtools-2.4.0/installation/dir/lib:/path/to/boost/installation/dir/stage/lib"
 
 ## Commands to Compile:
-copy paste following commands in a text file and save as a bash script. Please change the paths for boost and bamtools installation directories before runnning this script to compile ROAST in the working directory 
+To compile ROAST in the working directory, copy and paste following bash commands in a text file and save as a bash script. Please change the paths for boost and bamtools installation directories with yours. 
 
 	====
 	#!/bin/bash
