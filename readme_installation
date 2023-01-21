@@ -10,7 +10,9 @@ Or if you have used conda environment for installation, set the library path as:
 
 
 ## Commands to Compile:
-To compile ROAST in the working directory, copy and paste the following bash commands in a text file and save as a bash script. Alternatively, run the roast-compile.sh script from the working directory of ROAST. Before running this bash script, please change the paths for boost and bamtools installation directories with yours.
+To compile ROAST in the working directory, copy and paste the following bash commands in a text file and save as a bash script. Alternatively, run the 
+roast-compile.sh script from the working directory of ROAST. Before running this bash script, please change the paths for boost and bamtools installation
+directories with yours.
 
 	====
 	#!/bin/bash
@@ -25,7 +27,8 @@ To compile ROAST in the working directory, copy and paste the following bash com
 	====
 
 
-ROAST can be run from installation/directory/ROAST or by setting the environmental variable ROAST to point to this, which will make it easy to access both ROAST as well as external tools that come bundled with ROAST.
+ROAST can be run from installation/directory/ROAST or by setting the environmental variable ROAST to point to this, which will make it easy to access 
+both ROAST as well as external tools that come bundled with ROAST.
 
  	export ROAST=/path/to/ROAST/installation/dir
 
