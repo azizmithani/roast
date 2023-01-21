@@ -42,14 +42,15 @@ Following programming languages and tools must be installed on the system and ad
 
 * Trinity (required if assembly is not provided)
 
-**Bamtools and BOOST library Installation:**
 
 Alternatively, create Conda environment and install all pre-requiste libraries and tools from the roast-env.sh file using following commands
 
-conda create --name roast-env python=3.8 --yes
-conda activate roast-env
+	conda create --name roast-env python=3.8 --yes
+	conda activate roast-env
 
 Now run roast-env.sh from the terminal to install all the required tools and libraries.
+
+**Bamtools and BOOST library Installation:**
 
 Set library path
 
