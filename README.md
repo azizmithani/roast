@@ -44,12 +44,24 @@ Following programming languages and tools must be installed on the system and ad
 
 **Bamtools and BOOST library Installation:**
 
+Alternatively, create Conda environment and install all pre-requiste libraries and tools from the roast-env.sh file using following commands
+
+conda create --name roast-env python=3.8 --yes
+conda activate roast-env
+
+Now run roast-env.sh from the terminal to install all the required tools and libraries.
+
 Set library path
 
-	export LD_LIBRARY_PATH="/path/to/my/bamtools/lib:/path/to/my/boost/lib"
+	export LD_LIBRARY_PATH="/path/to/bamtools/installation/dir/lib:/path/to/boost/installation/dir/lib"
+	
+Or if you have used conda environment for installation, set the library path as:
+
+	export LD_LIBRARY_PATH="/path/to/conda/envs/roast-env/lib"
+
 
 ## Commands to Compile:
-To compile ROAST in the working directory, copy and paste following bash commands in a text file and save as a bash script. Please change the paths for boost and bamtools installation directories with yours before running this bash script. 
+To compile ROAST in the working directory, copy and paste the following bash commands in a text file and save as a bash script. Alternatively, run the roast-compile.sh script from the working directory of ROAST. Before running this bash script, please change the paths for boost and bamtools installation directories with yours.
 
 	====
 	#!/bin/bash
