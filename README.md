@@ -160,7 +160,8 @@ ROAST can be run from installation/directory/ROAST or by setting the environment
 	
 	--st_end_boundary <INT> 		Consider coverage change within start and end boundary of the contig, default one and half of read length 
 	
-	--blast_score_TH <INT> 		 	BLAST hit identity and coverage score for mis-assembly/false chimera, default 90
+	--blast_score_TH <INT> 		 	BLAST hit identity and coverage score to find overlap between fragmented contigs and identify mis-assembly/false chimera, default 90" << endl;
+
 	
 	--ignore_short_seq <INT> 		Minimum length of the contig to remove from the assembly, default 200
 	
