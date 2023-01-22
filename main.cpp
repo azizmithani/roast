@@ -108,7 +108,7 @@ void help() {
 
     cerr << "   --st_end_boundary <INT> \t\t Consider coverage change within start and end boundary of the contig, default one and half of read length " << endl;
 
-    cerr << "   --blast_score_TH <INT> \t\t BLAST hit identity and coverage score for mis-assembly/false chimera, default 90" << endl;
+    cerr << "   --blast_score_TH <INT> \t\t BLAST hit identity and coverage score to find overlap between fragmented contigs and identify mis-assembly/false chimera, default 90" << endl;
 
     cerr << "   --ignore_short_seq <INT> \t\t Minimum length of the contig to remove from the assembly, default200" << endl;
 
