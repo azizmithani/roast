@@ -1,3 +1,3 @@
 This folder contains external tools used by ROAST
-Couldn't upload Cufflinks.exe due to it's size which is 38Mb. Github only allowing file size less than 25Mbs to upload.
+Due to size limit on github, cufflinks is in compressed form. Please unzip cufflink before running ROAST.
 ROAST needs cufflink for false chimera identification and fixation step.
