@@ -1,3 +1,1 @@
-This folder contains external tools used by ROAST.
-Due to size limit on github, cufflinks is in compressed form. Please unzip cufflink before running ROAST.
-ROAST needs cufflink for false chimera identification and fixation step.
+This folder contains external tools use by ROAST.
