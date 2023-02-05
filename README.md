@@ -69,6 +69,8 @@ To compile ROAST in the working directory, copy and paste the following bash com
 	bamtools=/path/to/my/bamtools
 	boost=/path/to/my/boost
 	
+	unzip external_tools/cufflinks.zip
+	
 	 g++ -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs -lbamtools  -lboost_filesystem -lboost_regex -lz
 	 g++ -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ ROAST_extendContigs_SCs.cpp -o ROAST_extendContigs_SCs  -lbamtools -lboost_filesystem -lboost_regex -lz
 	 g++ -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ ROAST_mergeContigs_SCs.cpp -o ROAST_mergeContigs_SCs -lbamtools -lboost_filesystem -lboost_regex -lz
