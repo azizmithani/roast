@@ -183,3 +183,10 @@ Final improved file named final_improved.fasta, summary file and removed sequenc
 The log data for each improvement at each step is present in log folder with file name after each super and mini iterations. Time log shows time taken by each step.
 
 Run statistics are displayed on screen.
+
+## Test data:
+
+Test data is available here:
+https://zenodo.org/record/8192067
+
+Arabidopsis test dataset consists of paired-end fast files, initial assembly in fasta format, improved assembly by ROAST along with log files and summary output, and TransRate scoring matrices for both initial and improved assembly.
