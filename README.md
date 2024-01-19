@@ -190,3 +190,8 @@ Test data is available here:
 https://zenodo.org/record/8192067
 
 Arabidopsis test dataset consists of paired-end fast files, initial assembly in fasta format, improved assembly by ROAST along with log files and summary output, and TransRate scoring matrices for both initial and improved assembly.
+
+## Citing:
+
+Cite as
+Shabbir, M., Mithani, A. Roast: a tool for reference-free optimization of supertranscriptome assemblies. BMC Bioinformatics 25, 2 (2024). https://doi.org/10.1186/s12859-023-05614-4
