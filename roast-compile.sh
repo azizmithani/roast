@@ -2,7 +2,7 @@
 bamtools=~/miniconda2/envs/roast-env2
 boost=~/miniconda2/envs/roast-env2
 
-unzip external_tools/cufflinks
+unzip external_tools/cufflinks.zip -d external_tools/
 
 g++ -I $bamtools/include/bamtools -I $boost/include/ -L $boost/lib/ -L $bamtools/lib/ ROAST_extendContigs.cpp -o ROAST_extendContigs -lbamtools -lboost_filesystem -lboost_regex -lz
 
